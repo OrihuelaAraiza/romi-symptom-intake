@@ -68,5 +68,3 @@ Si tienes ideas para mejorar la accesibilidad, la experiencia de usuario o añad
 Este proyecto está bajo la licencia MIT.
 
 ⸻
-
-¿Quieres que lo arme en formato markdown con emojis y títulos listos para que copies/pegues directamente en tu README.md, o prefieres algo más formal y académico (tipo documento de entrega universitaria)?
