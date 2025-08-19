@@ -9,7 +9,6 @@ export const ErrorSummary: React.FC<{
 
   useEffect(() => {
     if (errors.length > 0) {
-      // Enfocar el contenedor al aparecer errores
       ref.current?.focus()
     }
   }, [errors])

@@ -5,7 +5,6 @@ export const A11yToolbar: React.FC = () => {
   const [prefs, setPrefs] = useState<A11yPrefs>(() => loadA11yPrefs())
 
   useEffect(() => {
-    // Aplicar preferencias al <html>
     document.documentElement.setAttribute('data-font', prefs.font)
     document.documentElement.setAttribute('data-contrast', prefs.contrast)
     document.documentElement.setAttribute('data-motion', prefs.motion)

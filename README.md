@@ -1,70 +1,74 @@
-# React + TypeScript + Vite
+¡Perfecto! 🚀 Te armo un texto para tu README.md que explique el propósito del proyecto, cómo correrlo y destaque que es accesible y amigable para todas las personas:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+⸻
 
-Currently, two official plugins are available:
+🩺 Romi Symptom Intake
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto es una aplicación web diseñada para facilitar el registro inicial de datos de pacientes, síntomas y mediciones de manera rápida, clara y accesible.
+Su objetivo principal es mejorar la experiencia de usuarios y profesionales de la salud al recolectar información esencial para un diagnóstico o seguimiento médico.
 
-## Expanding the ESLint configuration
+⸻
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✨ Características
+• Formulario paso a paso (wizard) para no abrumar al usuario.
+• Accesibilidad primero (A11y):
+• Campos de entrada con bordes visibles siempre.
+• Textos claros y bien contrastados.
+• Navegación con teclado y lectores de pantalla.
+• Validaciones amigables para evitar errores comunes (ejemplo: rango de edad entre 0 y 120 años).
+• Opciones inclusivas de género (Masculino, Femenino, Prefiero no decir).
+• Diseño responsivo: funciona en computadoras, tablets y celulares.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+⸻
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+🛠️ Tecnologías
+• React con TypeScript
+• Vite para un desarrollo rápido
+• TailwindCSS para estilos accesibles y responsivos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⸻
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚀 Instalación y uso
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clona el repositorio:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# romi-symptom-intake
+git clone https://github.com/OrihuelaAraiza/romi-symptom-intake.git
+cd romi-symptom-intake
+
+Instala dependencias:
+
+npm install
+
+Ejecuta el proyecto en modo desarrollo:
+
+npm run dev
+
+Compila para producción:
+
+npm run build
+
+⸻
+
+📸 Vista previa
+
+Ejemplo de formulario:
+• Paso 1: Identificación del paciente
+• Paso 2: Registro de síntomas
+• Paso 3: Mediciones
+
+⸻
+
+🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! 🎉
+Si tienes ideas para mejorar la accesibilidad, la experiencia de usuario o añadir nuevas funciones, no dudes en abrir un issue o un pull request.
+
+⸻
+
+📜 Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+⸻
+
+¿Quieres que lo arme en formato markdown con emojis y títulos listos para que copies/pegues directamente en tu README.md, o prefieres algo más formal y académico (tipo documento de entrega universitaria)?

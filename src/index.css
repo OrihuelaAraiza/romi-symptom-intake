@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ==== Tokens de accesibilidad (controlados por data-attrs en <html>) ==== */
 :root {
-  --app-font-size: 16px;             /* base */
-  --focus-color: #1d4ed8;            /* brand-700 */
+  --app-font-size: 16px;           
+  --focus-color: #1d4ed8;          
   --surface: #ffffff;
-  --surface-2: #f8fafc;              /* slate-50 */
-  --border: #e2e8f0;                 /* slate-200 */
-  --text: #0f172a;                   /* slate-900 */
-  --muted: #475569;                  /* slate-600 */
+  --surface-2: #f8fafc;             
+  --border: #e2e8f0;            
+  --text: #0f172a;                
+  --muted: #475569;          
 }
 
 html[data-font="lg"] { --app-font-size: 18px; }
@@ -31,7 +30,6 @@ body {
   background: var(--surface-2);
 }
 
-/* Skip link visible al enfocar */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -47,13 +45,11 @@ body {
   top: 8px;
 }
 
-/* Estado de enfoque accesible */
 :focus-visible {
   outline: 3px solid var(--focus-color);
   outline-offset: 2px;
 }
 
-/* Tamaño táctil mínimo para controles */
 input[type="checkbox"],
 input[type="radio"],
 button {
@@ -61,7 +57,6 @@ button {
   min-height: 44px;
 }
 
-/* Slider (range) accesible */
 input[type="range"] {
   width: 100%;
   height: 1.25rem;
@@ -94,7 +89,6 @@ input[type="range"]::-moz-range-thumb {
   border: 2px solid #3b82f6;
 }
 
-/* Reduce motion para personas con preferencia */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
@@ -104,71 +98,66 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
-/* Superficies que usan tokens */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
 }
 
-/* --- UTILIDADES DE ENVOLTURA/SEGURIDAD --- */
 .wrap-anywhere {
-  overflow-wrap: anywhere; /* permite saltos en palabras largas */
+  overflow-wrap: anywhere; 
   word-break: break-word;
   hyphens: auto;
 }
 
-/* Evita que hijos desborden contenedores redondeados */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
-  overflow: hidden; /* <-- evita que salga contenido por bordes redondeados */
+  overflow: hidden; 
 }
 
-/* Corrige flex-shrink de elementos dentro de contenedores flex/grid */
 .min-w-0 {
-  min-width: 0; /* permite que el texto se encoja y envuelva */
+  min-width: 0; 
 }
 
-/* --- Fix visual de fieldset/legend para que el texto no se empalme con el borde --- */
+
 .fieldset-a11y {
   position: relative;
-  padding: 1rem;                /* más aire adentro */
+  padding: 1rem;                
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   background: var(--surface);
 }
 
-/* El legend “tapa” el borde con el mismo color del fondo y agrega un poco de padding */
+
 .fieldset-a11y > legend {
-  padding: 0 0.375rem;          /* espacio lateral para que no toque el borde */
-  margin-left: 0.25rem;         /* separa del borde izquierdo redondeado */
-  background: var(--surface);   /* “enmascara” el trazo del borde detrás del texto */
-  line-height: 1.1;             /* compacta un poco la altura para que quede centrado */
-  border-radius: 0.25rem;       /* opcional: redondeo suave detrás del texto */
+  padding: 0 0.375rem;         
+  margin-left: 0.25rem;        
+  background: var(--surface);   
+  line-height: 1.1;         
+  border-radius: 0.25rem;       
 }
 
-/* Asegura que el contenido no empuje el borde: */
+
 .fieldset-a11y .fieldset-body {
   margin-top: 0.5rem;
 }
 
-/* Si ves que los outlines de foco se cortan en la tarjeta, quita overflow en .card */
+
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
-  /* overflow: hidden;  <- si los outlines se cortan, déjalo comentado así */
+  
 }
 
-/* Extra: pequeños resguardos contra desbordes de texto */
 .wrap-anywhere { overflow-wrap: anywhere; word-break: break-word; hyphens: auto; }
 .min-w-0 { min-width: 0; }
 
 input, textarea, select {
-  border: 1px solid #ccc; /* siempre borde gris */
-  border-radius: 8px;     /* esquinas redondeadas */
+  border: 1px solid #ccc; 
+  border-radius: 8px;     
   padding: 8px 12px;
   width: 100%;
   outline: none;
