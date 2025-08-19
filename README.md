@@ -1,5 +1,3 @@
-¡Perfecto! 🚀 Te armo un texto para tu README.md que explique el propósito del proyecto, cómo correrlo y destaque que es accesible y amigable para todas las personas:
-
 ⸻
 
 🩺 Romi Symptom Intake
