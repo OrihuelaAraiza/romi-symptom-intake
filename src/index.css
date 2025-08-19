@@ -165,3 +165,17 @@ input[type="range"]::-moz-range-thumb {
 /* Extra: pequeños resguardos contra desbordes de texto */
 .wrap-anywhere { overflow-wrap: anywhere; word-break: break-word; hyphens: auto; }
 .min-w-0 { min-width: 0; }
+
+input, textarea, select {
+  border: 1px solid #ccc; /* siempre borde gris */
+  border-radius: 8px;     /* esquinas redondeadas */
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2563eb;   /* azul */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
