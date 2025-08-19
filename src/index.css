@@ -110,3 +110,58 @@ input[type="range"]::-moz-range-thumb {
   border: 1px solid var(--border);
   border-radius: 1rem;
 }
+
+/* --- UTILIDADES DE ENVOLTURA/SEGURIDAD --- */
+.wrap-anywhere {
+  overflow-wrap: anywhere; /* permite saltos en palabras largas */
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Evita que hijos desborden contenedores redondeados */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden; /* <-- evita que salga contenido por bordes redondeados */
+}
+
+/* Corrige flex-shrink de elementos dentro de contenedores flex/grid */
+.min-w-0 {
+  min-width: 0; /* permite que el texto se encoja y envuelva */
+}
+
+/* --- Fix visual de fieldset/legend para que el texto no se empalme con el borde --- */
+.fieldset-a11y {
+  position: relative;
+  padding: 1rem;                /* más aire adentro */
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+}
+
+/* El legend “tapa” el borde con el mismo color del fondo y agrega un poco de padding */
+.fieldset-a11y > legend {
+  padding: 0 0.375rem;          /* espacio lateral para que no toque el borde */
+  margin-left: 0.25rem;         /* separa del borde izquierdo redondeado */
+  background: var(--surface);   /* “enmascara” el trazo del borde detrás del texto */
+  line-height: 1.1;             /* compacta un poco la altura para que quede centrado */
+  border-radius: 0.25rem;       /* opcional: redondeo suave detrás del texto */
+}
+
+/* Asegura que el contenido no empuje el borde: */
+.fieldset-a11y .fieldset-body {
+  margin-top: 0.5rem;
+}
+
+/* Si ves que los outlines de foco se cortan en la tarjeta, quita overflow en .card */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  /* overflow: hidden;  <- si los outlines se cortan, déjalo comentado así */
+}
+
+/* Extra: pequeños resguardos contra desbordes de texto */
+.wrap-anywhere { overflow-wrap: anywhere; word-break: break-word; hyphens: auto; }
+.min-w-0 { min-width: 0; }
